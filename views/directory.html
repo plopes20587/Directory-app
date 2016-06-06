@@ -1,0 +1,20 @@
+<div class="content">
+  <div ng-controller="ninjaController">
+    <button ng-click="order = 'name'">Order by Name</button> <!-- ng-click defines the variable 'order' by name or belt  -->
+    <button ng-click="order = 'belt'">Order by Belt</button>
+    <input type="text" ng-model="search" placeholder="Search for a ninja">
+    <ul class="listings">
+      <li ng-repeat="ninja in ninjas | orderBy: order | filter: search" ng-show="ninja.available"> <!-- Adding a "filter" use a " | " symbol-->
+        <h3>{{ninja.name}} - {{ninja.rate | currency}} </h3><!-- to add mulitple expressions use "-" hyphen  -->
+        <div class="remove" ng-click="removeNinja(ninja)">x</div>
+        <span class="belt" style="background: {{ninja.belt}}">{{ninja.belt}} belt</span>
+      </li>
+    </ul>
+   <form ng-submit="addNinja()">
+    <input type="text" placeholder="name" ng-model="newninja.name">
+    <input type="text" placeholder="belt" ng-model="newninja.belt">
+    <input type="text" placeholder="rate" ng-model="newninja.rate">
+    <input type="submit" value="Add new ninja">
+  </form>
+  </div>
+</div>
