@@ -74,6 +74,6 @@ myNinjaApp.config(['$routeProvider', function($routeProvider){
         }
       ];
 
-      
+
 
   }]);

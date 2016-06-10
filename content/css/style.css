@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  font-family: 'Open Sans',sans-serif;
 }
 
 h1,h2,h3 {
@@ -12,6 +13,11 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.home-container {
+  color: #333;
+  margin: 15px;
 }
 
 .menu-bar {
